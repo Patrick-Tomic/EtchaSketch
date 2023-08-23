@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Etch a Sketch</title>
+        <link href="style.css" rel="stylesheet">
+      
+        
+    </head>
+    
+    <body>
+        <h1>Etch a sketch</h1>
+       <div class="container">
+        
+        <div class="controls">
+            <div>
+            <p>Size:<output id="gridSize"></output></p>
+            <input id = "scale" type="range" name = "rang" defaultvalu="16" min="1"max="100">
+            
+            </div>
+            <div>
+            <label for="base">Base color of pen</label>
+            <input id="base" type="color" name="base" value="#ffc600">
+            </div>
+            
+            <button id="eraser" onclick="eraserClick()">Eraser</button>
+            <button id="reset">Reset</button>
+        </div>
+        
+        <div id="sketch">
+        
+        </div>
+       </div>
+         
+      
+        
+       <script src="script.js"></script>
+       
+    </body>
+
+    </html>
