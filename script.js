@@ -127,15 +127,32 @@ let bgColor = '#ffffff';
                                     container.appendChild(item);
                                 }
                     }
-    createGrid();
-
+                createGrid();
+                draw();
     //resets grid once size scale is changed
-    function removeGrid(){
-        while(container.firstChild){
-        container.removeChild(container.firstChild);
-        }
-    }
+                        function removeGrid(){
+                            while(container.firstChild){
+                            container.removeChild(container.firstChild);
+                            }
+                        }
 
-  
+                const reset = document.querySelector("#reset");
+                reset.addEventListener("click",draw);
+                        function draw(){
+                            let flag = false;
+                        window.onmouseup = ()=>{
+                            flag = false;
+                            }
+                            const gridItems = document.querySelectorAll(".gridItem");
+                            const base = document.querySelector(".base");
+                            gridItems.forEach(item=>item.addEventListener("mouseover",()=>{
+                                if(flag ==true) item.style.backgroundColor = base.value;
+                                        item.onmousedown = ()=>{
+                                            item.style.backgroundColor = base.value;
+                                            flag = true;
+                                        };
+                            }));
+                        }
+                        
 
 

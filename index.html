@@ -18,11 +18,12 @@
                 <div class="controls">
             
                     <input type="color" name ="base" class="base">
-                    <output >Size:<p id="scale-size"></p> </output>
-                    <input type="range" name="scale" class="scale"data-type="px">
+                    Scale Size: <label id="scale-size" for="grid-size"></label>
+                    <input type="range" name="scale" class="scale"data-type="px"
+                    min="1" max="100">
     
                     <button onclick="Eraser()">Eraser</button>
-                    <button onclick="createGrid()">Reset</button>
+                    <button id="reset" onclick="createGrid()">Reset</button>
                 
                 </div>
             <div class="gridContainer">
