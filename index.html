@@ -8,29 +8,33 @@
     </head>
     
     <body>
-        <h1>Etch a sketch</h1>
-       <div class="container">
         
-        <div class="controls">
-            <div>
-            <p>Size:<output id="gridSize"></output></p>
-            <input id = "scale" type="range" name = "rang" defaultvalu="16" min="1"max="100">
+       
+            <div class="gridWrap">
+                <div>
+                    <h1>Etch a sketch</h1> 
+                </div>
+        <div class="main">
+                <div class="controls">
             
+                    <input type="color" name ="base" class="base">
+                    <output >Size:<p id="scale-size"></p> </output>
+                    <input type="range" name="scale" class="scale"data-type="px">
+    
+                    <button onclick="Eraser()">Eraser</button>
+                    <button onclick="createGrid()">Reset</button>
+                
+                </div>
+            <div class="gridContainer">
             </div>
-            <div>
-            <label for="base">Base color of pen</label>
-            <input id="base" type="color" name="base" value="#ffc600">
+        </div>
             </div>
             
-            <button id="eraser" onclick="eraserClick()">Eraser</button>
-            <button id="reset">Reset</button>
-        </div>
         
-        <div id="sketch">
         
-        </div>
+        
        </div>
-         
+     
       
         
        <script src="script.js"></script>

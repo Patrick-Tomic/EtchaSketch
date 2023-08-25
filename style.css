@@ -1,50 +1,37 @@
 :root{
     --base:#ffc600;
+    --scale:16px;
 }
-
-  h1{
-    text-align: center;
-  }
+body{
+    background-color: lightblue;
+}
 
 .container{
     display: flex;
-   justify-content: space-around;
 }
-
+.main{
+    display: flex;
+}
 .controls{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-#sketch{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex:1;
-  
-}
-.grid{
-    
    display: flex;
-   
-    max-height: 50%;
-    max-width: 50%;;
-    flex:1;
+   flex-direction: column;
+   margin-right: 50px;
 }
-.column{
-    flex:1; 
+.gridWrap{
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
 }
-#row{
-  
-    background-color:white;
-    border:1px solid black;
-    border-width:thin;
-    text-align: center;
+.gridContainer{
+    float: right;
+    display:grid;
     width: 500px;
-    
-   
+    height:500px;
+    border: 1px rgba(0, 0, 0, 0.404) solid;
 }
-#row:hover{
-    background-color:gray;
+.gridItem{
+    user-select: none;
+    border: 1px solid gray;
 }
