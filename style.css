@@ -1,6 +1,10 @@
 :root{
-    --base:#ffc600;
+    --base:#090909;
     --scale:16px;
+}
+h1{
+    text-align: center;
+    font-family: 'Merienda';
 }
 body{
     background-color: lightblue;
@@ -34,4 +38,8 @@ body{
 .gridItem{
     user-select: none;
     border: 1px solid gray;
+    
+}
+.gridItem:hover{
+    background-color: gray;
 }
